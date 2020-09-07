@@ -33,7 +33,7 @@ const DataTable = (props) => {
             accessor: 'view'
         },
     ];
-    console.log(props.overview);
+    // console.log(props.overview);
 
     return (<ReactTable data={props.overview} columns={columns} />);
 }

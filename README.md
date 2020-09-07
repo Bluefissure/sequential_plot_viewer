@@ -1,3 +1,5 @@
+# Front End
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +68,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+# Back End
+
+## Flask
+
+A simple flask backend, use `flask run --port 5000` to provide a backend API provider.
+
+If you change the port used by flask, please change [react proxy](https://github.com/Bluefissure/sequential_plot_viewer/blob/master/package.json#L41) as well.
