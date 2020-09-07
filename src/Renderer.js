@@ -81,7 +81,7 @@ function renderBar(d){
   }
   
   function renderBox(d){
-    console.log(d);
+    // console.log(d);
     let subtitle = "";
     for(let k in d.slice){
       subtitle += k.trim() + ":" + d.slice[k].trim() + " ";
