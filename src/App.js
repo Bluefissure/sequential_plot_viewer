@@ -35,8 +35,11 @@ class App extends Component {
           this.setState({highchartsConfig: config});
           break;
         case 'histogram':
-        case 'percentile':
           config = renderHistogram(data);
+          this.setState({highchartsConfig: config});
+          break;
+        case 'percentile':
+          config = renderHistogram(data, true);
           this.setState({highchartsConfig: config});
           break;
         case 'boxplot':

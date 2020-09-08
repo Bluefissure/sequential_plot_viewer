@@ -4,6 +4,7 @@ function renderBar(d){
     for(let k in d.slice){
       subtitle += k.trim() + ":" + d.slice[k].trim() + " ";
     }
+    subtitle += "\n Support:" + d.metadata[3];
     let categories = [], series_data = [];
     for(let i in d.data[0]){
       categories.push(d.data[0][i][0]);
@@ -23,13 +24,16 @@ function renderBar(d){
         text: subtitle
       },
       xAxis: {
+        title: {
+            text: d.first_attr
+        },
         categories: categories,
         tickInterval: 1
       },
       yAxis: {
         title: {
-            text: d.first_attr
-        }
+            text: "Percentage(%)"
+        },
       },
       series: [{
           name: "data#"+d.id,
@@ -39,12 +43,13 @@ function renderBar(d){
     return config;
   }
   
-  function renderHistogram(d){
+  function renderHistogram(d, percentile=false){
     // console.log(d);
     let subtitle = "";
     for(let k in d.slice){
       subtitle += k.trim() + ":" + d.slice[k].trim() + " ";
     }
+    subtitle += "\n Support:" + d.metadata[3];
     let series_data = [];
     for(let i in d.data[0]){
       series_data.push(d.data[0][i]);
@@ -64,13 +69,16 @@ function renderBar(d){
         text: subtitle
       },
       xAxis: {
+        title: {
+            text: d.first_attr
+        },
         categories: [...new Array(n).keys()].map(x => x.toString()),
         tickInterval: parseInt(n / 20)
       },
       yAxis: {
         title: {
-            text: d.first_attr
-        }
+            text: percentile?'Percentage(%)':'Values'
+        },
       },
       series: [{
           name: "data#"+d.id,
@@ -86,6 +94,7 @@ function renderBar(d){
     for(let k in d.slice){
       subtitle += k.trim() + ":" + d.slice[k].trim() + " ";
     }
+    subtitle += "\n Support:" + d.metadata[3];
     let series_data = [];
     for(let i in d.data[0]){
       series_data.push(d.data[0][i]);

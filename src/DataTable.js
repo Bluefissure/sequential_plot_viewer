@@ -34,6 +34,10 @@ const DataTable = (props) => {
             accessor: 'plot'
         },
         {
+            Header: 'SUPPORT',
+            accessor: 'support'
+        },
+        {
             Header: 'View',
             accessor: 'view'
         },
