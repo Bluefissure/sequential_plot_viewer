@@ -22,6 +22,7 @@ def get_overview():
                     data[cat] = filters[cat.upper()]
                 else:
                     data[cat] = "ALL"
+            data["plot"] = item[6]
             data_list.append(data)
     return {"overview": data_list}
 

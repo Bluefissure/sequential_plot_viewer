@@ -29,6 +29,11 @@ const DataTable = (props) => {
             accessor: 'meetings'
         },
         {
+            Header: 'PLOT',
+            filterable: true,
+            accessor: 'plot'
+        },
+        {
             Header: 'View',
             accessor: 'view'
         },
